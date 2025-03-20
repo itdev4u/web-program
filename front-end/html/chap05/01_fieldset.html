@@ -17,6 +17,25 @@
     </fieldset>
     <fieldset>
         <legend>상품 선택</legend>
+        <p><b>주문할 상품을 선택해 주세요</b></p>
+        <label><input type="checkbox" value="s_3">선물용 3Kg</label>
+        <input type="number" min="0" max="5">개(최대 5개)
+        <label><input type="checkbox" value="s_5">선물용 5Kg</label>
+        <input type="number" min="0" max="3">개(최대 3개)
+        <label><input type="checkbox" value="f_3">가정용 3Kg</label>
+        <input type="range" min="0" max="5">개(최대 5개)
+        <label><input type="checkbox" value="f_5">가정용 5Kg</label>
+        <input type="range" min="0" max="3">개(최대 3개)
+        <p><b>포장 선택</b></p>
+        <label><input type="radio" name="gift" value="yes">선물 포장</label>
+        <label><input type="radio" name="gift" value="no">선물 포장 안함</label>
+        <p><b>상품 선택</b></p>
+        <select id="prod1">
+            <option value="1" selected>선물용 3kg</option>
+            <option value="2" selected>선물용 5kg</option>
+            <option value="3" selected>가정용 3kg</option>
+            <option value="4" selected>가정용 5kg</option>
+        </select>
     </fieldset>
     <fieldset>
         <legend>배송 정보</legend>
@@ -37,7 +56,22 @@
                 <label for="phone">연락처</label>
                 <input type="tel" id="phone"></input>
             </li>
+            <li>
+                <label for="memo">메모</label>
+                <textarea id="memo" cols="40" rows="4"></textarea>
+            </li>
         </ul>
+    </fieldset>
+    <fieldset>
+        <legend>날짜와 시간 지정하기</legend>
+        <p><b>날짜 지정하기</b></p>
+        <input type="date">
+        <input type="date" min="2025-03-04" max="2025-03-25">
+        <input type="month">
+        <input type="week">
+        <p><b>시간 지정하기</b></p>
+        <input type="time">
+        <input type="datetime-local">
     </fieldset>
 </form>
 </body>
